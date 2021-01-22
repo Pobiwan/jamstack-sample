@@ -1,0 +1,10 @@
+
+{{$colorVariable := "blue"}}
+
+{{ if eq .Type "photos" }}
+{{  $colorVariable = "cyan" }}
+{{ end}}
+
+
+<h1 class="post-title" style="color:{{$colorVariable}}"> {{ .Title }} </h1>
+<div class="post-line"></div>
