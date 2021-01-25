@@ -10,3 +10,6 @@ Post excerpt
 # Main Heading
 
 Post content...
+<!-->
+{{<youtube DhNMHcRSNdo>}}
+<!-- {{<placeholder width="100" height="100">}} -->

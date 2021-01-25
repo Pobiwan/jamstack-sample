@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "JAMSite"
 theme = "tale"
 copyright = "copyright 2021"
+
+[outputs] 
+    home = ["HTML","JSON"]

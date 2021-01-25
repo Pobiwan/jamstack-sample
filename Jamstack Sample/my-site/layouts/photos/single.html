@@ -12,7 +12,7 @@
 		{{- end }}
 
 		{{- range .Site.Pages }}
-		{{ .Title }}: {{.URL}} </br>
+		{{ .Title }}: {{.URL}} {{ .Params.date }} </br>
 		{{- end }}
 		{{ partial "single/header.html" . }}
 

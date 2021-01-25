@@ -1,13 +1,29 @@
 {{ define "main" }}
-<p> i am here</p>
 <main>
+
+	<link rel="stylesheet" href="{{ (resources.Get "css/code.css").Permalink}}">
+
+
 	<div class="post">
 		{{ partial "single/post-info.html" . }}
 		{{ partial "single/title.html" . }}
-
+		<p class="highlight"> I am highlighted text</p>
+		<p class="highlight2"> I am highlighted2 text</p>
+		{{ range getJSON "https://jsonplaceholder.typicode.com/todos/1" }}
+			{{ . }}
+		{{ end }}
+		<hr>
+		<!-- associative array -->
+		{{ index (getJSON "https://jsonplaceholder.typicode.com/todos/1") "title" | humanize }}
 		{{ partial "single/header.html" . }}
-
+		<hr>
+		{{ with (.GetPage "photos/hugo-dog")}}
+			This section is from {{.Title}}
+		{{end}}
+		<hr>
 		{{ .Content }}
+
+		{{ partial "contact.html" . }}
 
 		{{ partial "single/footer.html" . }}
 	</div>

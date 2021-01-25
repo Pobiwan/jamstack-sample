@@ -1,0 +1,42 @@
+
+<style media="screen">
+
+#contact {
+    background: #DEDEDE;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  #contact input, #contact textarea {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
+
+  #contact button {
+    font-size: 1.25rem;
+    background: dodgerblue;
+    border-radius: 5px;
+    color: white;
+    width: 10rem;
+  }
+
+</style>
+
+<script> 
+  function testFunc(){
+    console.log("test func hitted")
+    return false;
+  }
+</script>
+
+<form id="contact" onsubmit="return testfunc()">
+    <input type="email" name="email" value="" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" rows="3" col="100"></textarea>
+    <button type="submit" name="button"> Send Message </button>
+</form>
